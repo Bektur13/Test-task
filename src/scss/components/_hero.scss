@@ -1,0 +1,139 @@
+.hero {
+    &__asteroids {
+        margin-top: 24px;
+        background: linear-gradient(90deg, #CFF37D 0%, #7DE88C 100%);
+        padding: 24px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        border: 1px solid #000;
+        position: relative;
+    }
+    &__box {
+        z-index: 1;
+    }
+    .small__meteorid {
+        position: absolute;
+        left: 122px;
+        top: 28px;
+    }
+    .middle__meteorid {
+        position: absolute;
+        left: 72px;
+        top: 0;
+    }
+    .big__meteorid {
+        position: absolute;
+        left: 5px;
+        top: 0;
+        z-index: 0;
+    }
+    .dinosaur {
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+    }
+    &__title {
+        margin-bottom: 30px;
+        @include font(24px, 700);
+        border-bottom: 1px solid #000;
+    }
+    &__distance {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: flex-end;
+    }
+    &__p {
+        text-align: center;
+        @include font(16px, 400);
+        span {
+            @include font(16px, 700);
+        }
+    }
+    .btn {
+        background-color: #186DD6;
+        border-radius: 24px;
+        padding: 14px 16px;
+        @include font(16px, 400);
+        cursor: pointer;
+    }
+    .dangerous {
+        background: linear-gradient(90deg, #FFB199 0%, #FF0844 100%);
+    }
+}
+
+.rights {
+    margin-top: 56px;
+    text-align: center;
+}
+
+@media screen and (max-width: 414px) {
+    .hero {
+        &__asteroids {
+            flex-direction: column;
+            padding: 0;
+        }
+        &__title {
+            background: linear-gradient(90deg, #CFF37D 0%, #7DE88C 100%);
+            width: 100%;
+            border-bottom: transparent;
+            text-align: center;
+        }
+        &__distance {
+            justify-content: center;
+        }
+        .box2 {
+            margin-top: 150px;
+            background-color: #fff;
+            width: 100%;
+            z-index: 0;
+        }
+        .box3 {
+            background-color: #fff;
+            width: 100%;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .btn {
+            margin: 0 0 20px 130px;
+        }
+        .dinosaur {
+            width: 35px;
+            height: 30px;
+            top: 148px;
+            left: 370px;
+            transform: scaleX(-1);
+            z-index: 1;
+        }
+        .big__meteorid {
+            max-width: 330px;
+        }
+        .bc {
+            background: linear-gradient(90deg, #FFB199 0%, #FF0844 100%);
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .hero {
+        .dinosaur {
+            left: 330px;
+        }
+        .btn {
+            margin: 0 0 20px 110px;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .hero {
+        .dinosaur {
+            left: 310px;
+        }
+        .btn {
+            margin: 0 0 20px 110px;
+        }
+    }
+}
